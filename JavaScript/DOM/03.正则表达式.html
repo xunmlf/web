@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+
+    <!--
+    邮箱验证
+    -->
+
+
+
+    <script>
+        window.onload=function(){
+            document.getElementById("btn").onclick=function(){
+                var email= document.getElementById("email").value;
+                var emailRegExp=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                var ok = emailRegExp.test(email);
+                if(!ok){
+                    document.getElementById("emailerror").innerText="邮箱不合法";
+                }
+            }
+             //给文本框绑定focus
+             document.getElementById("email").onfocus=function(){
+                    document.getElementById("emailerror").innerText="";
+                }
+        }
+    </script>
+
+    <input type="text" id="email">
+    <span id="emailerror" style="color: red; font-size:12px;"></span>
+    <br><br>
+    <input type="button" value="验证邮箱" id="btn">
+    
+</body>
+</html>

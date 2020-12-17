@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <select onchange="alert(this.value)">
+        <option value="">--请选择省份--</option>
+        <option value="jc">江西省</option>
+        <option value="hn">河南省</option>
+        <option value="zj">浙江省</option>
+        <option value="fj">福建省</option>
+    </select>
+    -->
+
+    <script>
+        window.onload=function(){
+            var procince = document.getElementById("province");
+            procince.onchange=function(){
+                //获取选中项的value
+                alert(procince.value);
+            }
+        }
+    </script>
+    <select id="province">
+        <option value="">--请选择省份--</option>
+        <option value="jc">江西省</option>
+        <option value="hn">河南省</option>
+        <option value="zj">浙江省</option>
+        <option value="fj">福建省</option>
+    </select>
+
+
+</body>
+</html>

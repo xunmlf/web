@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.js"></script>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            color: red;
+            font-size: 30px;
+        }
+
+        #father{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            color: red;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        #son{
+            width: 80px;
+            height: 80px;
+            background-color:orange;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+             jquery中的功能函数
+               
+                  1： show()  &   hide()
+                         
+                          show() : 负责让jQuery对象包含的所有DOM对象关联的标签在浏览器上显示
+                          hide() :负责让jQuery对象包含的所有DOM对象关联的标签在浏览器上隐藏
+
+
+
+                  2: remove()  &   empty()
+                           
+                            empty :将当前标签的子标签进行清除处理
+
+                            remove:当前标签及其子标签一并清除
+
+
+                 3:apped()  &  appendTo()
+                          
+                     共同点：都是操作标签中的InnerHtml ，为当前标签d添加子标签
+
+                         append :父标签.append(子标签) 父亲给自己找了个儿子
+                           
+                         appendTo ：子标签.appendTo(父标签) 儿子给自己找爹
+    
+        */
+    </script>
+
+    <div id="box">
+        我是一个div
+    </div>
+
+    <script>
+       window.onload = function () {
+            fun1 = function () {
+                $("#box").hide(3000);  //hide(时间)
+            }
+
+            fun2 = function () {
+                $("#box").show(3000);  //show(时间)
+            }
+
+            fun3 = function () {
+                $("#one").remove();
+            }
+
+            fun4 = function () {
+                $("#two").empty();
+            }
+
+            fun5 = function () {
+                $("#father").append($("#son"));
+            }
+
+            fun6 = function () {
+                $("#son").appendTo($("#father"));
+            }
+
+        }
+
+</script>
+   
+    <input type="button" value="隐藏div" onclick="fun1();">
+    <input type="button" value="显示div" onclick="fun2()">
+
+
+
+
+
+    <br><br>
+
+    大臣1：<select name="" id="one">
+        <option value="">大儿子</option>
+        <option value="">小儿子</option>
+        <option value="">女儿</option>
+    </select>
+    大臣2：<select name="" id="two">
+        <option value="">大儿子</option>
+        <option value="">小儿子</option>
+        <option value="">女儿</option>
+    </select>
+    
+    <input type="button" value="大臣1满门抄斩" onclick="fun3();">
+    <input type="button" value="大臣2断子绝孙" onclick="fun4()">
+
+
+    <div id="father"> 我是爸爸</div>
+    <div id="son"> 我是儿子</div>
+
+    <input type="button" value="爸爸找儿子" onclick="fun5();">
+    <input type="button" value="儿子找爸爸" onclick="fun6();">
+    
+</body>
+</html>

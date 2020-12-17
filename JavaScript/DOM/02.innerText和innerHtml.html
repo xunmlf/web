@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border:  1px red solid;
+            position: absolute;
+            top: 100px;
+            left:100px;
+        }
+
+    </style>
+</head>
+<body>
+<script>
+    /*
+    innerHtml   innerText的区别
+
+    innerHtml 将后面的字符串当作HTML代码执行
+
+     innerText  后面的代码只当作字符串处理
+    */
+    window.onload=function(){
+        document.getElementById("btn").onclick=function(){
+
+           // document.getElementById("box1").innerHTML="老师放声大哭浪费时间";
+            
+            document.getElementById("box1").innerHTML="<font color ='red'>不能为空</font>";
+        }
+    }
+</script>
+<input type="text" id="btn" value="将内容写到div中">
+    <div id="box1"></div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+        4:可以通过script标签引入外部js文件
+    -->
+    <script src="./js代码/编写位置.js"></script>
+
+    <!--
+        3:可以将js代码写在script标签中
+    -->
+    <script>
+        alert("点我");
+    </script>
+</head>
+<body>
+
+    <!--
+        1：可以将js代码写在onclick属性中
+    -->
+    <button onclick="alert('你点我干嘛？');">点我一下</button>
+
+
+    <!--
+        2：可以将js代码写在超链接的herf属性中，这样当点击超链接时，会执行JS代码
+    -->
+    <a href="javascript:alert('让你点你就点！');">你也点我一下</a>
+</body>
+</html>

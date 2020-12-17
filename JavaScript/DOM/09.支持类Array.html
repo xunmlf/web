@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[1,2,3,9];
+        var str = a.join("-");   //连接成字符串
+        alert(str);    //1-2-3-9
+
+
+
+
+//js数组可以自动模拟栈数据结构
+
+        //在数组末尾添加一个数
+        a.push(10);
+        alert(a.join("-"));    //1-2-3-9-10
+
+        //末尾数组弹出
+        var end=a.pop();
+        alert(end);
+        alert(a.join("-"));
+
+        //数组反转
+        a.reverse();
+        alert(a.join("-"));
+    </script>
+</body>
+</html>

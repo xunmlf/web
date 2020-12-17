@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.js"></script>
+    <style>
+        div{
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+        过滤器语法介绍
+
+                -1：对已经定位的jQuery对象中DOM对象，进行二次过滤筛选的
+
+                -2：过滤器不能独立使用，必须声明在选择器后面 
+
+                -3：六种过滤器（三种常见过滤器）
+
+
+
+            基本过滤器
+                  
+                   $("选择器:first");  留下满足条件的第一个DOM对象
+                                    eg: $(":button:first");  定位页面中的第一个button
+
+                   $("选择器:last");  留下满足条件的最后一个DOM对象
+                                    eg: $(":button:last");  定位页面中的最后一个button
+
+                   $("选择器:eq(下标值)");留下满足条件中的指定位置的DOM对象
+                                    eg: $("div:eq(2)");  定位页面中第三个div
+
+                    $("选择器:lt(下标值)");留下满足条件中的指定位置之前的DOM对象
+                                     eg: $("checkbox:lt(2)"); 页面中前两个checkbox
+
+                  $("选择器:gt(下标值)");留下满足条件中的指定位置之后的DOM对象
+                                     eg: $("checkbox:gt(2)"); 位置在第3个checkbox之后的所有的checkbox
+                                    
+        */
+
+
+        
+    </script>
+
+    <h1>以下是div</h1>
+    <div id="one">我的序号是0</div>
+    <div id="two" class="c02">我的序号是1</div>
+    <div id="three">我的序号是2
+        <div id="son">我的序号是3</div>
+        <div id="son">我的序号是4</div>
+    </div>
+    <div id="five">我的序号是5</div>
+
+    <h2>以下是span元素</h2>
+    <span>我是span标签</span>
+    <br><br>
+
+    <script>
+        window.onload=function(){
+            fun1=function(){
+                $("div:first").css("background-color","red");
+            }
+
+            fun2=function(){
+                $("div:last").css("background-color","yellow");
+            }
+
+            fun7=function(){
+                $("div:lt(3)").css("background-color","orange");
+            }
+
+            fun8=function(){
+                $("div:eq(3)").css("background-color","pink");
+            }
+
+            fun9=function(){
+                $("div:gt(3)").css("background-color","blue");
+            }
+
+
+        }
+    </script>
+    <input type="button" value="选择第一个div" id="btn1" onclick="fun1();">
+    <input type="button" value="选择最后一个div" id="btn2" onclick="fun2();">
+    <input type="button" value="选择id值不是one的div" id="btn3">
+    <input type="button" value="选择class不包含c02的div" id="btn4">
+    <input type="button" value="选择索引号为奇数的div元素" id="btn5">
+    <input type="button" value="选择索引号为偶数的div元素" id="btn6">
+    <input type="button" value="选择索引号小于3的div元素" id="btn7" onclick="fun7();">
+    <input type="button" value="选择索引号等于3的div元素" id="btn8" onclick="fun8();">
+    <input type="button" value="选择索引号大于于3的div元素" id="btn9" onclick="fun9();">
+    <input type="button" value="选择所有标题元素" id="btn10">
+    
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.js"></script>
+</head>
+<body>
+    <script>
+        /*
+        
+        jQuery中事件绑定方式
+            
+            $(":button").click(fun1);
+            $(":button").change(fun2);
+        */
+
+    
+    window.onload=function(){
+        Fun=function(){
+           alert($(this).val());
+
+        }
+
+        fun1=function(){
+            $(":button:lt(3)").bind("click",Fun);
+        }
+
+        fun2=function(){
+            $(":button:lt(2)").unbind("click");
+        }
+
+       
+    }
+    </script>
+
+    <input type="button" value="我是大哥" >
+    <input type="button" value="我是二哥" >
+    <input type="button" value="我是三哥" >
+
+    <br><br>
+    <input type="button" value="绑定前三个按钮的点击事件" onclick="fun1();">
+    <input type="button" value="解除前两个按钮的点击事件" onclick="fun2();">
+    
+</body>
+</html>

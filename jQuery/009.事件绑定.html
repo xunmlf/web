@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.js"></script>
+    <style>
+         div{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>我是一个div</div>
+    <input type="button" value="隐藏div" id="btn1">
+    <input type="button" value="显示div" id="btn2">
+    <script>
+        window.onload=function(){
+            fun1=function(){
+                $("div").hide(2000);
+            }
+            fun2=function(){
+                $("div").show(2000);
+            }
+
+            $("#btn1").click(fun1);
+            $("#btn2").click(fun2);
+
+        }
+    </script>
+</body>
+</html>

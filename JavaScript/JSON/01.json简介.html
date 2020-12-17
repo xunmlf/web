@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        1；什么是JSON 
+            -JavaScript Object Notation 简称json  (数据交换格式)
+
+            JSON主要作用，一种标准的数据交换格式（目前非常流行，90%以上的系统使用JSON进行数据交换）
+
+
+        2：JSON是一种便准的轻量级的数据交换格式  特点是： 体积小， 易解析
+
+        3：在实际开发中有两种常用的数据交换格式，一种是JSON,一种是XML
+
+            -XML体积大，解析麻烦  但是优点是：语法严谨（通常银行相关的系统会用） 
+
+        4:JSON语法格式
+        var json={
+            "属性名" : "属性值",
+            "属性名" : "属性值",
+            "属性名" : "属性值",
+            "属性名" : "属性值",
+            …………
+        }  ;
+        
+        */
+
+
+        //创建一个JSON对象(JSON也可称为无类型对象。轻量级，体积小，易解析)
+        var JsonObj = {
+            "sno": "110",
+            "sname": "张三",
+            "sex": "男"
+        };
+
+        //访问JSON对象的属性
+        alert(JsonObj.sno + "," + JsonObj.sname + "," + JsonObj.sex);
+
+
+        //JSON数组
+        var student = [
+            { "sno": "110", "sname": "张三", "sex": "男" },
+            { "sno": "120", "sname": "李四", "sex": "男" },
+            { "sno": "130", "sname": "王五", "sex": "男" }
+        ];
+
+        //遍历
+        for (var i = 0; i < student.length; i++) {
+            var stu = student[i];
+            alert(stu.sno + "," + stu.sname + "," + stu.sex);
+
+        }
+
+
+
+        //之前定义类，创建对象，访问对象属性
+        /* student=function(son ,sname,sex){
+             this.son=son;
+             this.sname=sname;
+             this.sex=sex;
+         }
+         var  stu = new student("111","李四","男");
+         alert(stu.son+","+stu.sname+","+stu.sex);*/
+    </script>
+</body>
+
+</html>

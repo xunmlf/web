@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+
+                         <div>1</div>
+                         <div name="two">2</div>
+                         <div name="three">3</div>
+       2： 基本属性过滤器：
+                        -
+                        -1:  $("选择器[属性名]")：留下满足定位条件的并且在声明时为指定属性手动赋值的dom对象
+                                                   -$("div[name]")  <div name="two">2</div>
+                                                                    <div name="three">3</div>
+
+                        -2: $("选择器[属性名='值']") 留下满足条件的指定属性内容 
+                                                   -$("div[name='two']")  <div name="two">2</div>
+                    
+        
+                        -3：$("选择器[属性名^='值']")  留下满足条件以指定内容开头的内容
+                                               --$("div[name^='t']")  <div name="two">2</div>
+                                                                      <div name="three">3</div>
+                        -4：$("选择器[属性名$='值']")  留下满足条件以指定内容结尾的内容
+                                                   --$("div[name$='e']")    <div name="three">3</div>
+                        -5：$("选择器[属性名*='值']")   满足包含指定内容的dom
+                                                 --$("div[name*='w']")       <div name="two">2</div> 
+
+
+        3： 工作状态属性过滤器
+            
+               - $("选择器:enabled");  留下满足条件的并且处于可用状态得dom对象
+                                     -例子 ：$(":button:enabled")  定位所有可用的button
+
+               - $("选择器:disabled");  留下满足条件的并且处于不可用状态的dom对像
+                                     - -例子 ：$(":button:disabled")  定位所有不可用的button
+
+               - $("选择器:checked");  处于选中状态的dom对象
+                                    - $(":checkbox:checked:first")  页面中第一个被选中的checkbox
+
+               - $("选择器:selected"); 处于选中状态的dom对象
+                                    -$("select>option:selected") 下拉列表中被选中的option   
+                             
+
+            
+        */
+    </script>
+</body>
+</html>

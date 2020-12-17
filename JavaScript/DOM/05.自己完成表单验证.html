@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload=function(){
+            var usernameElt = document.getElementById("username");
+            var usernameErrorelt = document.getElementById("usernameError");
+            usernameElt.onblur=function(){
+                //获取用户名
+                var name = usernameElt.value;
+                //去除用户名前后空白
+                name = name.trim();
+                //判断用户名是否为空
+                if(name==""){
+                    usernameErrorelt.innerText="用户名不能为空";
+                }else{
+                    //长度判段
+                    if(name.length<6||name.length>16){
+                        usernameErrorelt.innerText="用户名长度在[6,16]之间";
+                    }else{
+                        //判断是否有特殊符号
+                        //正则表达式
+                        var regExp = /^[A-Za-z0-9]+$/;
+                        var ok=regExp.test(name);
+                       if(!ok){
+                           usernameErrorelt.innerText="用户名只能由数字、字母、下划线组成";
+                       } 
+                    }
+                }
+               
+            }
+            usernameElt.onfocus=function(){
+
+                if( usernameErrorelt.innerText !=""){
+                    usernameElt.value="";
+                }
+                usernameErrorelt.innerText="";
+            }
+        }
+
+    </script>
+
+<form action="">
+    用户名  <input type="text" id="username" name="username"><span id="usernameError"></span><br>
+    密码  <input type="text" id="password"><br>
+    确认密码 <input type="text" id="password2"><span id="password2Error"></span><br>
+    邮箱 <input type="text" id="email"><span id="emailError"></span><br>
+    <input type="button" value="注册" id="btn">
+    <input type="reset" id="rs">
+
+</form>
+</body>
+</html>

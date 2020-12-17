@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        window.onload = function () {
+            var firstChk = document.getElementById("firstChk");
+            firstChk.onclick = function () {
+                //根据最后一个复选框的选中状态（复选框对象 checkbox对象）
+
+                //根据name获取所有元素
+                var aihaos = document.getElementsByName("aihao");
+                if (firstChk.checked) {
+                    //全选
+                    for(var i=0 ; i<aihaos.length ; i++){
+                        aihaos[i].checked=true;
+                    }
+                } else {
+                    //取消全选
+                    for(var i=0 ; i<aihaos.length ; i++){
+                        aihaos[i].checked=false;
+                    }
+                }
+            }
+        }*/
+        //简化版
+        window.onload = function () {
+            //根据name获取所有元素
+            var aihaos = document.getElementsByName("aihao");
+            var firstChk = document.getElementById("firstChk");
+            firstChk.onclick = function () {
+                //根据最后一个复选框的选中状态（复选框对象 checkbox对象）
+                for (var i = 0; i < aihaos.length; i++) {
+                    aihaos[i].checked = firstChk.checked;
+                }
+            }
+
+            //对以上数组进行遍历
+            var  all = aihaos.length;
+           
+            for (var i = 0; i < aihaos.length; i++) {
+                    aihaos[i].onclick = function(){
+                        var count = 0;
+                        //总数量和选中的相等的时候，全选框选中
+                        for (var i = 0; i < aihaos.length; i++){
+                            if(aihaos[i].checked){
+                                count++;
+                            }
+                        }
+                        firstChk.checked = (all == count);
+                        /*
+                        if(all==count){
+                            firstChk.checked=true;
+                        }else{
+                            firstChk.checked=false;
+                        }*/
+                    }
+                }
+        }
+    </script>
+    <input type="checkbox" name="aihao" id="drink">喝酒
+    <input type="checkbox" name="aihao" id="smoke">抽烟
+    <input type="checkbox" name="aihao" id="tt">烫头
+    <input type="checkbox" id="firstChk">全选
+</body>
+
+</html>

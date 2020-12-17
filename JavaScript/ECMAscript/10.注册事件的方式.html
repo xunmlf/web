@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册事件的方式</title>
+</head>
+<body>
+
+    <input type="button" id="but" value="hello">
+
+    <script type="text/javascript">
+
+
+        // //第一步：先获取这个按钮对像
+        // var d = document.getElementById("but");
+
+
+        // //第二步：给按钮对象的onclick属性赋值
+        // d.onclick=function(){
+        //     alert("你好");
+        // }
+
+
+
+        document.getElementById("but").onclick=function(){
+            alert("你好呀");
+        }
+
+
+    </script>
+    
+</body>
+</html>

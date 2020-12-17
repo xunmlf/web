@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="one" class="two"></div><br>
+    <div class="two"></div><br>
+    <div></div><br>
+    <span>我是span标签</span><br>
+
+    <script>
+        window.onload=function(){
+            fun1=function(){
+                var $obj = $("#one");  //id选择器
+                $obj.css("background-color","red");// jQuery中的函数
+            }
+
+            fun2=function(){
+                var $obj = $(".two");  //class选择器
+                $obj.css("background-color","green");
+            }
+
+            fun3=function(){
+                var $obj=$("div");  //标签选择器
+                $obj.css("background-color","pink");
+            }
+
+            fun4=function(){
+                var $obj = $("*");  //全选
+                $obj.css("background-color","yellow");
+            }
+
+            fun5=function(){
+                var $obj = $("#one,span"); //
+                $obj.css("background-color","orange");
+            }
+        }
+    </script>
+    <input type="button" value="选择Id为one的元素" id="btn01" onclick="fun1();">
+    <input type="button" value="选择class为two的元素" id="btn02" onclick="fun2();"> 
+    <input type="button" value="选择所有div元素" id="btn03" onclick="fun3();">
+    <input type="button" value="选择所有元素" id="btn04" onclick="fun4();">
+    <input type="button" value="选择Id为one与所有span元素" id="btn05" onclick="fun5()">
+    
+</body>
+</html>

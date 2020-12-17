@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+    window.onload = function () {
+            document.getElementById("btn").onclick = function () {
+               document.getElementById("tx").type="checkbox";
+            }
+        }
+
+    window.onload = function (){
+        document.getElementById("btn2").onclick = function (){
+            document.getElementById("box").type="text";
+        }
+    }
+    </script>
+
+    <input type="text" id="tx">
+
+    <input type="button" value="将文本框变为复选框" id="btn" >
+
+    <br><br>
+
+    <input type="checkbox" id="box">
+
+    <input type="button2" value="将复选框变为文本框" id="btn2">
+
+
+
+
+   
+</body>
+</html> 

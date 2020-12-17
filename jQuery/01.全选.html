@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JQuery.js"></script>
+</head>
+<body>
+    <script>
+        /*
+        
+       1： jquery对象与dom对象的区别:
+              -1：是【jQuery函数 $() 】 负责创建的
+              -2：jQuery对象就是一个【数组】
+              -3：jQuery对象中存放的是本次定位中的【DOM对象】
+              -4：可以通过jQuery对象中的【功能函数】，来快速的定位DOM对象进行操作管理
+        
+       2：  jquery对象与dom对象的转换
+              
+              -1:jquery对象转换为DOM对象
+
+               for(var i=0;i<$obj.length;i++){
+                   var DOMobj=$obj[i];
+               }
+
+
+               -2:DOM对象转换为jQuery对象
+
+               var  $obj = $(DOMobj)
+        
+         
+        
+        
+        */
+        selectAll=function(){
+            //1:获取全选框的选中状态
+            var flag= $("#box").prop("checked");
+
+            //2：获取数据行的选中状态设置
+            $(".ah").prop("checked",flag);
+        }
+    </script>
+    <input type="checkbox" id="box" onclick="selectAll();">全选
+    <input type="checkbox" id="eat" name="aihao" class="ah">吃
+    <input type="checkbox" id="drink" name="aihao" class="ah">喝
+    <input type="checkbox" id="play" name="aihao" class="ah">玩
+</body>
+</html>
